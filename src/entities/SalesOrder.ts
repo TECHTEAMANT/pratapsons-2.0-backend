@@ -39,6 +39,12 @@ export class SalesOrder {
   @Column({ type: 'text', default: '' })
   notes: string;
 
+  @Column({ type: 'text', default: 'domestic' })
+  store_type: string; // 'domestic' | 'global'
+
+  @Column({ type: 'varchar', length: 10, default: 'INR' })
+  currency: string;
+
   @Column({ type: 'uuid', nullable: true })
   created_by: string;
 

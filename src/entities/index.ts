@@ -45,3 +45,4 @@ export { CreditCouponApplication } from './CreditCouponApplication';
 export { CreditCouponRefund } from './CreditCouponRefund';
 export { SalesOrderAdvanceApplication } from './SalesOrderAdvanceApplication';
 export { SalesOrderAdvanceRefund } from './SalesOrderAdvanceRefund';
+export { AppConfig } from './AppConfig';

@@ -12,6 +12,9 @@ export class ProductMaster {
   @Column({ type: 'text' })
   design_no: string;
 
+  @Column({ type: 'text', nullable: true })
+  sku: string;
+
   @Column({ name: 'product_group', type: 'text', nullable: true })
   product_group_id: string;
 
@@ -53,7 +56,7 @@ export class ProductMaster {
   photos: string[];
 
   @Column({ type: 'text', default: '' })
-  description: string;
+  name: string;
 
   @Column({ type: 'int', default: 1 })
   barcodes_per_item: number;

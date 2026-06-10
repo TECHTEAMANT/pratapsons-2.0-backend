@@ -24,6 +24,8 @@ import rpcRoutes from './rpc.routes';
 import storageRoutes from './storage.routes';
 import salesmanRoutes from './salesman.routes';
 import creditCouponRoutes from './creditCoupon.routes';
+import appConfigRoutes from './appConfig.routes';
+import shopifyImportRoutes from './shopifyImport.routes';
 
 const router = Router();
 
@@ -55,5 +57,7 @@ router.use('/rpc', rpcRoutes);
 router.use('/storage', storageRoutes);
 router.use('/salesmen', salesmanRoutes);
 router.use('/credit-coupons', creditCouponRoutes);
+router.use('/config', appConfigRoutes);
+router.use('/shopify', shopifyImportRoutes);
 
 export default router;

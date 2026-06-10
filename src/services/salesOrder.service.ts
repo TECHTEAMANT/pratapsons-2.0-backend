@@ -13,7 +13,9 @@ export class SalesOrderService {
   async findAll(filters: { status?: string; customer_id?: string; search?: string }) {
     const qb = this.orderRepo.createQueryBuilder('so')
       .leftJoinAndSelect('so.customer', 'c')
-      .leftJoinAndSelect('so.salesman', 's');
+      .leftJoinAndSelect('so.salesman', 's')
+      .leftJoinAndSelect('so.items', 'i')
+      .leftJoinAndSelect('i.salesman', 'is');
     if (filters.status) qb.andWhere('so.status = :status', { status: filters.status });
     if (filters.customer_id) qb.andWhere('so.customer_id = :cid', { cid: filters.customer_id });
     if (filters.search) qb.andWhere('(so.order_number ILIKE :s OR c.name ILIKE :s OR s.name ILIKE :s)', { s: `%${filters.search}%` });
