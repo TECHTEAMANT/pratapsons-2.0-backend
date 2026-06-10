@@ -270,6 +270,7 @@ export async function importSingleOrder(
       lineItems.push({
         sr_no: i + 1,
         design_no: product.design_no,
+        sku: li.sku || null,
         product_description: li.title || li.name || '',
         quantity: li.quantity || 1,
         mrp: price,

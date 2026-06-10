@@ -20,6 +20,9 @@ export class SalesOrderItem {
   design_no: string;
 
   @Column({ type: 'text', nullable: true })
+  sku: string;
+
+  @Column({ type: 'text', nullable: true })
   hsn_code: string;
 
   @Column({ type: 'text', default: '' })
